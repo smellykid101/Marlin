@@ -49,8 +49,8 @@
     #define X_MIN_PIN                      P1_28  // X+
   #endif
 #else
-  #define X_MIN_PIN                        P1_29  // X-
-  #define X_MAX_PIN                        P1_28  // X+
+  #define X_MIN_PIN                        P1_28//P1_29  // X-
+  #define X_MAX_PIN                        P1_29//P1_28  // X+
 #endif
 
 #if Y_STALL_SENSITIVITY
@@ -365,6 +365,12 @@
 #if SD_CONNECTION_IS(LCD)
   #define SS_PIN                    EXPA2_07_PIN
 #endif
+
+// SPI for Max6675 or Max31855 Thermocouple
+#define MAX6675_SS_PIN   P0_26 // Extra pin soldered to board. Define if using MAX6675 or MAX31855 or MAX31865
+//#define MAX6675_SCK_PIN P0_15
+//#define MAX6675_DO_PIN  P0_17
+//#define MAX6675_DI_PIN  P0_18
 
 /**
  * Special pins
